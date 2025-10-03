@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"><title>Crear usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+<main class="container">
+    <h2>Nuevo usuario</h2>
+    <p th:if="${error}" th:text="${error}" style="color:crimson"></p>
+    <form th:action="@{/usuarios}" th:object="${usuario}" method="post">
+        <label>Nombre <input th:field="*{nombre}"></label>
+        <label>Email <input type="email" th:field="*{email}"></label>
+        <label>Usuario <input th:field="*{username}"></label>
+        <label>Contraseña <input type="password" th:field="*{password}"></label>
+        <label>Rol
+            <select th:field="*{rol}">
+                <option th:each="r : ${roles}" th:value="${r}" th:text="${r}"></option>
+            </select>
+        </label>
+        <button type="submit">Guardar</button>
+        <a href="/usuarios">Volver</a>
+    </form>
+</main>
+</body>
+</html>
