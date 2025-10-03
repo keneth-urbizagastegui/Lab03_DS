@@ -1,6 +1,6 @@
 # Laboratorio03 — Login + CRUD Usuarios (Spring Boot + JPA + PostgreSQL + Thymeleaf)
 
-Proyecto MVC con **login simple contra BD** (sin Spring Security) y **CRUD completo** sobre la tabla `usuarios`.
+Proyecto MVC con **login contra BD**  y **CRUD completo** sobre la tabla `usuarios`.
 
 ## Requisitos
 - JDK 17 o 21
